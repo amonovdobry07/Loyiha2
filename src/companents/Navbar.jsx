@@ -3,18 +3,34 @@ import { MdPhonelinkRing } from "react-icons/md";
 import { TbMapPin2 } from "react-icons/tb";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { FiPhoneCall } from "react-icons/fi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io5";
+import picture1 from "../assets/pictures/picture1.jpg"
+import picture2 from "../assets/pictures/picture2.jpg"
+import picture3 from "../assets/pictures/picture3.jpg"
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
     const [isMobile, setIsMobile] = useState(false)
     const [bar, setbar] = useState(false)
+
+    // for Background Image 
+
+    const[bgIndex, setBgIndex] = useState(0)
+    const images = [picture1, picture2, picture3]
+
+    useEffect(() => {
+            const interval = setInterval(() => {
+                setBgIndex((prev) => (prev + 1) % images.length)                
+            }, 2000);
+            return () => clearInterval(interval)
+    },[])
+
     return (
-        <nav>
+        <nav style={{backgroundImage: `url(${images[bgIndex]})`}}>
             <div className="header-back-bg">
                 {/* ===========================
                 Header Logo and Phone, Map Container
