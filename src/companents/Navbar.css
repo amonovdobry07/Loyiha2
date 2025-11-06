@@ -8,13 +8,15 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.header-video{
+
+.header-video {
     position: absolute;
     width: 100%;
     height: 80%;
     top: 20%;
     object-fit: cover;
 }
+
 .header-back-bg {
     width: 100%;
     padding: 10px 10px;
@@ -233,6 +235,19 @@ nav {
     display: none;
 }
 
+
+/* Hero text  */
+
+.hero-text {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+
+}
 
 /* Media Screen Start  */
 

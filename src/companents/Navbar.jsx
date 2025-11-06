@@ -19,18 +19,18 @@ const Navbar = () => {
 
     // for Background Image 
 
-    const[bgIndex, setBgIndex] = useState(0)
-    const images = [picture1, picture2, picture3]
+    // const [bgIndex, setBgIndex] = useState(0)
+    // const images = [picture1, picture2, picture3]
 
-    useEffect(() => {
-            const interval = setInterval(() => {
-                setBgIndex((prev) => (prev + 1) % images.length)                
-            }, 2000);
-            return () => clearInterval(interval)
-    },[])
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setBgIndex((prev) => (prev + 1) % images.length)
+    //     }, 2000);
+    //     return () => clearInterval(interval)
+    // }, [])
 
     return (
-        <nav style={{backgroundImage: `url(${images[bgIndex]})`}}>
+        <nav style={{ backgroundImage: `url(${picture1})` }}>
             <div className="header-back-bg">
                 {/* ===========================
                 Header Logo and Phone, Map Container
@@ -207,8 +207,14 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+            <div className="hero-text">
+                <h1>
+                    Salom Qalesila
+                </h1>
+            </div>
         </nav>
     )
+
 }
 
 export default Navbar; 

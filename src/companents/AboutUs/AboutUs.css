@@ -1,0 +1,117 @@
+.AboutUs {
+    width: 100%;
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    font-family: 'Noto Sans', sans-serif;
+    color: #333;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.about-container-left {
+    width: 45%;
+}
+
+.about-container-left h1 {
+    margin-bottom: 20px;
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #353434, #d1d1d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-container-left p {
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.about-container-right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-top,
+.about-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about-container-right span {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ffffff, #eeeeee);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.about-container-right span:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(180deg, #353434, #d1d1d1);
+    color: #fff;
+}
+
+.about-container-right span h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #535353, #969696);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-container-right span:hover h1 {
+    background: linear-gradient(90deg, #e7e7e7, #b1b0b0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-container-right span p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #6b7280;
+    transition: color 0.4s ease;
+}
+
+.about-container-right span:hover p {
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 20px;
+    }
+
+    .about-container-left,
+    .about-container-right {
+        width: 100%;
+    }
+
+    .about-top,
+    .about-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
