@@ -17,20 +17,22 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [bar, setbar] = useState(false);
 
-  // for Background Image
+  const [backImage, setBackImage] = useState(0)
 
-  // const [bgIndex, setBgIndex] = useState(0)
-  // const images = [picture1, picture2, picture3]
+  const images = [picture1, picture2, picture3]
 
-  // useEffect(() => {
-  //     const interval = setInterval(() => {
-  //         setBgIndex((prev) => (prev + 1) % images.length)
-  //     }, 2000);
-  //     return () => clearInterval(interval)
-  // }, [])
+  useState(() => {
+    const interval = setInterval(() => {
+      setBackImage((prev) => (prev + 1) % images.length)
+    }, 1500)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
-    <nav style={{ backgroundImage: `url(${picture1})` }}>
+    <nav style={{ backgroundImage: `url(${images[backImage]})` }}>
+      {/* 🔹 Overlay qo‘shildi */}
+      <div className="overlay"></div>
+
       <div className="header-back-bg">
         {/* ===========================
                 Header Logo and Phone, Map Container
@@ -39,7 +41,8 @@ const Navbar = () => {
           <div className="header-logo">
             <h1>Amonoff</h1>
           </div>
-          {/* /* =================================
+
+          {/* =================================
                     Header top Phone Number and map
                     ================================= */}
           <div className="header-phone-container">
@@ -51,7 +54,6 @@ const Navbar = () => {
               <div className="icon-text">
                 <p>Phone Number:</p>
                 <a href="tel:+998884056888">
-                  {" "}
                   <h4>+(998) 88 405 68 88</h4>
                 </a>
               </div>
@@ -65,15 +67,17 @@ const Navbar = () => {
               <div className="m-icon-text">
                 <p>Location:</p>
                 <a href="">
-                  <h4>Buxoro Shaxar </h4>
+                  <h4>Buxoro Shaxar</h4>
                 </a>
               </div>
             </div>
           </div>
+
           <div className="header-bars" onClick={() => setbar(!bar)}>
             <HiMiniBars3BottomRight />
           </div>
         </div>
+
         <div className="header-nav-links-container">
           <div className="header-nav-links-left">
             <ul>
@@ -116,6 +120,7 @@ const Navbar = () => {
               </a>
             </ul>
           </div>
+
           <div className="header-mav-links-right">
             <button className="colsultation-button">
               <select name="language" id="language">
@@ -126,10 +131,12 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+
         {/* Mobile Container */}
         <div className={`close ${bar ? "closePage" : ""}`}>
           <IoMdClose onClick={() => setbar(!bar)} />
         </div>
+
         <div className={`mobile-header-container ${bar ? "active" : ""}`}>
           <ul className="mobile-ul">
             <a href="">
@@ -178,8 +185,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* Hero text */}
       <div className="hero-text">
-        <h1>Salom Qalesila</h1>
+        <h1>Har bir g‘oya — katta imkoniyatning boshlanishi!</h1>
       </div>
     </nav>
   );
