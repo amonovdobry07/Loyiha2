@@ -28,7 +28,7 @@ const AboutUs = () => {
                         </span>
                         <span className="a2">
                             <h1>
-                                100+
+                                15+
                             </h1>
                             <p>Lorem ipsum dolor sit amet.</p>
                         </span>
@@ -36,13 +36,13 @@ const AboutUs = () => {
                     <div className="about-bottom">
                         <span className="a3">
                             <h1>
-                                100+
+                                400+
                             </h1>
                             <p>Lorem ipsum dolor sit amet.</p>
                         </span>
                         <span className="a4">
                             <h1>
-                                100+
+                                250+
                             </h1>
                             <p>Lorem ipsum dolor sit amet.</p>
                         </span>
