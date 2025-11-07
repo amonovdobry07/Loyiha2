@@ -92,7 +92,7 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .contact-socials a:hover {
@@ -175,9 +175,10 @@
   width: 100%;
   padding: 15px 0;
   font-family: "Open Sans", sans-serif;
-  background-color: black;
+  background-color: #e5deda;
   text-align: center;
-  color: rgba(124, 120, 120, 1);
+  color: black;
+  font-weight: 500;
 }
 
 /* RESPONSIVE */

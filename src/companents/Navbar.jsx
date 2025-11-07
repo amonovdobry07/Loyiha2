@@ -11,6 +11,7 @@ import { IoLogoInstagram } from "react-icons/io5";
 import picture1 from "../assets/pictures/picture1.jpg";
 import picture2 from "../assets/pictures/picture2.jpg";
 import picture3 from "../assets/pictures/picture3.jpg";
+import TextType from './TextType';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -24,14 +25,21 @@ const Navbar = () => {
   useState(() => {
     const interval = setInterval(() => {
       setBackImage((prev) => (prev + 1) % images.length)
-    }, 1500)
+    }, 2500)
     return () => clearInterval(interval)
   }, [])
+
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 5000, // global duration ms — endi hamma data-aos elementlari 1000ms bo'ladi
+  //     once: false,    // sahifa scroll qaytib kelganda qaytadan animatsiya bo'lsinmi
+  //   });
+  // }, []);
 
   return (
     <nav style={{ backgroundImage: `url(${images[backImage]})` }}>
       {/* 🔹 Overlay qo‘shildi */}
-      <div className="overlay"></div>
+      <div className="overlay" data-aos="zoom-in" data-aos-duration="2000" ></div>
 
       <div className="header-back-bg">
         {/* ===========================
@@ -39,7 +47,7 @@ const Navbar = () => {
                 ==========================*/}
         <div className="header-contact-container">
           <div className="header-logo">
-            <h1>Amonoff</h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000">Amonoff</h1>
           </div>
 
           {/* =================================
@@ -47,11 +55,11 @@ const Navbar = () => {
                     ================================= */}
           <div className="header-phone-container">
             <div className="phone-icon">
-              <div className="icon">
+              <div className="icon" data-aos="fade-up" data-aos-duration="1000">
                 <MdPhonelinkRing />
               </div>
               <span className="span-icon"></span>
-              <div className="icon-text">
+              <div className="icon-text" data-aos="fade-up" data-aos-duration="1000">
                 <p>Phone Number:</p>
                 <a href="tel:+998884056888">
                   <h4>+(998) 88 405 68 88</h4>
@@ -60,11 +68,11 @@ const Navbar = () => {
             </div>
 
             <div className="map-icon">
-              <div className="m-icon">
+              <div className="m-icon" data-aos="fade-up" data-aos-duration="1000">
                 <TbMapPin2 />
               </div>
               <span className="span-m-icon"></span>
-              <div className="m-icon-text">
+              <div className="m-icon-text " data-aos="fade-up" data-aos-duration="1000">
                 <p>Location:</p>
                 <a href="">
                   <h4>Buxoro Shaxar</h4>
@@ -78,8 +86,12 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="header-nav-links-container">
-          <div className="header-nav-links-left">
+        <div className="header-nav-links-container" >
+          <div className="header-nav-links-left"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0">
             <ul>
               <a href="">
                 <li>Home</li>
@@ -122,7 +134,11 @@ const Navbar = () => {
           </div>
 
           <div className="header-mav-links-right">
-            <button className="colsultation-button">
+            <button className="colsultation-button"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="300"
+              data-aos-offset="0">
               <select name="language" id="language">
                 <option value="uz">🇺🇿 Uzbek</option>
                 <option value="ru">🇷🇺 Russian</option>
@@ -136,59 +152,67 @@ const Navbar = () => {
         <div className={`close ${bar ? "closePage" : ""}`}>
           <IoMdClose onClick={() => setbar(!bar)} />
         </div>
+      </div>
 
-        <div className={`mobile-header-container ${bar ? "active" : ""}`}>
-          <ul className="mobile-ul">
-            <a href="">
-              <li>Home</li>
-            </a>
-            <a href="">
-              <li>About</li>
-            </a>
-            <a href="">
-              <li>Service</li>
-            </a>
-            <a href="">
-              <li>Contact</li>
-            </a>
-            <a style={{ cursor: "pointer" }}>
-              <li
-                className="Mobile-Drop-Dawn"
-                onClick={() => setIsMobile(!isMobile)}
-              >
-                Market Place ▼
-                {isMobile && (
-                  <ul className="MobileDropDawn-menu">
-                    <li>
-                      <a href="">Ozon</a>
-                    </li>
-                    <li>
-                      <a href="">Wildberries</a>
-                    </li>
-                    <li>
-                      <a href="">Yandex Market</a>
-                    </li>
-                    <li>
-                      <a href="">Uzum Market</a>
-                    </li>
-                  </ul>
-                )}
-              </li>
-            </a>
-          </ul>
-          <div className="mobile-links">
-            <select name="language" id="language">
-              <option value="uz">🇺🇿 Uzbek</option>
-              <option value="ru">🇷🇺 Russian</option>
-              <option value="en">🇬🇧 English</option>
-            </select>
-          </div>
+      <div className={`mobile-header-container ${bar ? "active" : ""}`}>
+        <ul className="mobile-ul">
+          <a href="">
+            <li>Home</li>
+          </a>
+          <a href="">
+            <li>About</li>
+          </a>
+          <a href="">
+            <li>Service</li>
+          </a>
+          <a href="">
+            <li>Contact</li>
+          </a>
+          <a style={{ cursor: "pointer" }}>
+            <li
+              className="Mobile-Drop-Dawn"
+              onClick={() => setIsMobile(!isMobile)}
+            >
+              Market Place ▼
+              {isMobile && (
+                <ul className="MobileDropDawn-menu">
+                  <li>
+                    <a href="">Ozon</a>
+                  </li>
+                  <li>
+                    <a href="">Wildberries</a>
+                  </li>
+                  <li>
+                    <a href="">Yandex Market</a>
+                  </li>
+                  <li>
+                    <a href="">Uzum Market</a>
+                  </li>
+                </ul>
+              )}
+            </li>
+          </a>
+        </ul>
+        <div className="mobile-links">
+          <select name="language" id="language">
+            <option value="uz">🇺🇿 Uzbek</option>
+            <option value="ru">🇷🇺 Russian</option>
+            <option value="en">🇬🇧 English</option>
+          </select>
         </div>
       </div>
 
       {/* Hero text */}
       <div className="hero-text">
-        <h1>Har bir g‘oya — katta imkoniyatning boshlanishi!</h1>
+        <div className="hero-text-in">
+          <TextType
+            text={[`Text typing effect for your websites Happy coding! `]}
+            typingSpeed={75}
+            pauseDuration={1500}
+            showCursor={true}
+            cursorCharacter="|"
+          />
+        </div>
       </div>
     </nav>
   );

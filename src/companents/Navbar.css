@@ -276,6 +276,14 @@ nav .hero-text {
   align-items: center;
   color: white;
   font-family: "Montserrat", sans-serif;
+  position: relative;
+  z-index: 5;
+  /* desktopda hero yozuv ustida */
+}
+
+.hero-text-in {
+  width: 60%;
+
 }
 
 /* Media Screen Start  */
@@ -283,6 +291,17 @@ nav .hero-text {
 @media screen and (max-width: 1200px) {
   .header-nav-links-container {
     width: 90%;
+  }
+
+  .hero-text {
+    position: absolute;
+    z-index: 0;
+    /* hero matnni mobil menyu tagiga tushiradi */
+  }
+
+  .hero-text-in {
+    width: 70%;
+
   }
 }
 
@@ -293,6 +312,12 @@ nav .hero-text {
 
   .header-back-bg {
     background-color: #e5deda;
+  }
+
+  .hero-text {
+    position: absolute;
+    z-index: 0;
+    /* hero matnni mobil menyu tagiga tushiradi */
   }
 
   .header-phone-container {
@@ -323,6 +348,7 @@ nav .hero-text {
     padding-left: 15px;
     display: flex;
     flex-direction: column;
+    z-index: 10;
   }
 
   .mobile-header-container.active {

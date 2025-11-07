@@ -3,7 +3,9 @@ import photo from "../../assets/pictures/image.png"
 import photo1 from "../../assets/pictures/image(1).png"
 import star from "../../assets/pictures/Star1.png"
 import { IoMdHeartEmpty } from "react-icons/io";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Products = () => {
 
@@ -19,33 +21,29 @@ const Products = () => {
         { id: 9, img: photo1, word: "Super Serum Skin Mis Spf 4000", star: star, price: 40, view: 723 },
     ];
 
-    // Dastlab 3 ta mahsulot ko‘rsatamiz
     const [visible, setVisible] = useState(3);
 
-    // Faqat visible sonicha mahsulotlarni ko‘rsatamiz
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    }, []);
+
+    // Agar visible o‘zgarsa, AOS refresh qilamiz
+    useEffect(() => {
+        AOS.refresh();
+    }, [visible]);
+
     const visibleProducts = maxsulotlar.slice(0, visible);
 
-    // ✅ "Ko‘proq" tugmasi bosilganda
     const handleClick = () => {
-        setVisible((prev) => {
-            const newCount = prev + 3;
-            console.log(visible + "Plus");
-            // Agar yangi son barcha mahsulotlardan oshsa, maksimal sonni qaytaramiz
-            return newCount > maxsulotlar.length ? maxsulotlar.length : newCount;
+        setVisible(prev => Math.min(prev + 3, maxsulotlar.length));
+    }
 
-        });
-    };
-
-    // ✅ "Kamroq" tugmasi bosilganda
     const handleMinus = () => {
-        setVisible((prev) => {
-            const newCount = prev - 3;
-            console.log(visible + "Minus");
-
-            // Agar yangi son 3 tadan kam bo‘lsa, 3 qilib qaytaramiz
-            return newCount < 3 ? 3 : newCount;
-        });
-    };
+        setVisible(prev => Math.max(prev - 3, 3));
+    }
 
     return (
         <div className="Products">
@@ -54,10 +52,14 @@ const Products = () => {
                     <h1>Tovarlar</h1>
                 </div>
 
-                {/* Ko‘rinadigan mahsulotlar */}
                 <div className="products-container cards-boxes">
                     {visibleProducts.map((maxsulot, index) => (
-                        <div className="cards-in" key={index}>
+                        <div
+                            className="cards-in"
+                            key={index}
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100} // kartalarni ketma-ket animatsiya qiladi
+                        >
                             <div className="cards-picture">
                                 <img src={maxsulot.img} alt="" />
                                 <div className="like">
@@ -70,13 +72,10 @@ const Products = () => {
                             <div className="cards-bottom">
                                 <h4>{maxsulot.word}</h4>
                                 <div className="stars">
-                                    <img src={star} alt="" />
-                                    <img src={star} alt="" />
-                                    <img src={star} alt="" />
-                                    <img src={star} alt="" />
-                                    <img src={star} alt="" />
-                                    &nbsp; &nbsp;
-                                    <p>({maxsulot.view})</p>
+                                    {[...Array(5)].map((_, i) => (
+                                        <img src={star} alt="" key={i} />
+                                    ))}
+                                    &nbsp;&nbsp;<p>({maxsulot.view})</p>
                                 </div>
                                 <div className="price">
                                     <div className="usd">
@@ -91,25 +90,11 @@ const Products = () => {
                     ))}
                 </div>
 
-                {/* 🔽 Tugmalar logikasi */}
                 <div className="koproq-btn">
-                    {/* 1️⃣ Kamroq tugmasi faqat 3 tadan ko‘p mahsulot bo‘lsa chiqadi */}
-                    {visible > 3 && (
-                        <button onClick={handleMinus}>
-                            Kamroq...
-                        </button>
-                    )}
+                    {visible > 3 && <button onClick={handleMinus}>Kamroq...</button>}
                     &nbsp;
-                    {/* 2️⃣ Ko‘proq tugmasi faqat hammasi chiqmaganda ko‘rinadi */}
-                    {visible < maxsulotlar.length && (
-                        <button onClick={handleClick}>
-                            Ko‘proq...
-                        </button>
-
-
-                    )}
+                    {visible < maxsulotlar.length && <button onClick={handleClick}>Ko‘proq...</button>}
                 </div>
-
             </div>
         </div>
     );
