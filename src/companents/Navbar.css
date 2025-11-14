@@ -178,16 +178,6 @@ nav .hero-text {
   position: relative;
 }
 
-.header-nav-links-left ul li:after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 60px;
-  background-color: #57595f;
-  top: -21px;
-  left: 0px;
-}
-
 .header-mav-links-right {
   width: 30%;
   height: 60px;
@@ -231,23 +221,41 @@ nav .hero-text {
   color: white;
 }
 
-.DropDawn {
+.DropDrop {
   position: relative;
+  cursor: pointer;
+  color: #b9b5b4;
+  font-weight: 500;
+  list-style: none;
 }
 
-.DropDawn-menu {
+.DropDawnMenu {
   position: absolute;
-  left: 10px;
-  width: 100% !important;
-  padding: 20px 0;
-  height: 220px !important;
+  width: 150px !important;
+  height: 250px !important;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: center !important;
-  background-color: #57595f;
-  top: -70px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  left: 0;
+  background-color: rgba(46, 46, 45, 0.596);
+  padding: 20px 25px 20px 0;
+  z-index: 80 !important;
+  top: -170px;
 }
+
+
+.DropDawnMenu li {
+  list-style: none;
+}
+
+
+.ClearCircle {
+  list-style: none;
+}
+
+
 
 .DropDawn-menu a li {
   padding-left: 0;

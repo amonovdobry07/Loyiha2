@@ -22,13 +22,12 @@ const Navbar = () => {
 
   const images = [picture1, picture2, picture3]
 
-  useState(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
-      setBackImage((prev) => (prev + 1) % images.length)
-    }, 2500)
-    return () => clearInterval(interval)
-  }, [])
-
+      setBackImage((prev) => (prev + 1) % images.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
   // useEffect(() => {
   //   AOS.init({
   //     duration: 5000, // global duration ms — endi hamma data-aos elementlari 1000ms bo'ladi
@@ -105,31 +104,22 @@ const Navbar = () => {
               <a href="#Contact">
                 <li>Contact</li>
               </a>
-              <a style={{ cursor: "pointer" }}>
-                <li
-                  className="DropDawn"
-                  onMouseEnter={() => setOpen(true)}
-                  onMouseLeave={() => setOpen(false)}
-                >
-                  Market Place ▼
-                  {open && (
-                    <ul className="DropDawn-menu">
-                      <a href="">
-                        <li>Ozon</li>
-                      </a>
-                      <a href="">
-                        <li>WildBerries</li>
-                      </a>
-                      <a href="">
-                        <li>Yandex Market</li>
-                      </a>
-                      <a href="">
-                        <li>Uzum Market</li>
-                      </a>
-                    </ul>
-                  )}
-                </li>
-              </a>
+
+              <li className="DropDrop"
+
+                onMouseEnter={() => setOpen(true)}
+                onMouseLeave={() => setOpen(false)}>
+                Market Place ▼
+                {open && (
+                  <ul className="DropDawnMenu">
+                    <li><a href="">Ozon</a></li>
+                    <li><a href="">Wilberries</a></li>
+                    <li><a href="">Uzum Market</a></li>
+                    <li><a href="">Yandex Market</a></li>
+                  </ul>
+                )}
+              </li>
+
             </ul>
           </div>
 
