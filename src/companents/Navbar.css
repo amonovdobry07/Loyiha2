@@ -239,13 +239,14 @@ nav .hero-text {
   position: absolute;
   left: 10px;
   width: 100% !important;
-  padding: 10px 0;
+  padding: 20px 0;
   height: 220px !important;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center !important;
   background-color: #57595f;
+  top: -70px;
 }
 
 .DropDawn-menu a li {
@@ -284,6 +285,15 @@ nav .hero-text {
 .hero-text-in {
   width: 60%;
 
+}
+
+#language {
+  padding: 15px 20px;
+}
+
+#language option {
+  color: black;
+  background: #e5deda;
 }
 
 /* Media Screen Start  */
@@ -455,6 +465,15 @@ nav .hero-text {
     justify-content: center;
     align-items: center;
     color: #999ba0;
+  }
+
+  #language {
+    padding: 10px 20px;
+  }
+
+  #language option {
+    color: #ececec;
+    background: #333841;
   }
 }
 

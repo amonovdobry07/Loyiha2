@@ -47,7 +47,7 @@ const Navbar = () => {
                 ==========================*/}
         <div className="header-contact-container">
           <div className="header-logo">
-            <h1 data-aos="fade-up" data-aos-duration="1000">Amonoff</h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000">BigLogo</h1>
           </div>
 
           {/* =================================
@@ -61,8 +61,8 @@ const Navbar = () => {
               <span className="span-icon"></span>
               <div className="icon-text" data-aos="fade-up" data-aos-duration="1000">
                 <p>Phone Number:</p>
-                <a href="tel:+998884056888">
-                  <h4>+(998) 88 405 68 88</h4>
+                <a href="tel:+998993851755">
+                  <h4>+(998) 99 385 17 55</h4>
                 </a>
               </div>
             </div>
@@ -75,7 +75,7 @@ const Navbar = () => {
               <div className="m-icon-text " data-aos="fade-up" data-aos-duration="1000">
                 <p>Location:</p>
                 <a href="">
-                  <h4>Buxoro Shaxar</h4>
+                  <h4>Buxoro Viloyat</h4>
                 </a>
               </div>
             </div>
@@ -96,13 +96,13 @@ const Navbar = () => {
               <a href="">
                 <li>Home</li>
               </a>
-              <a href="">
+              <a href="#About">
                 <li>About</li>
               </a>
-              <a href="">
-                <li>Section</li>
+              <a href="#Pruduct">
+                <li>Products</li>
               </a>
-              <a href="">
+              <a href="#Contact">
                 <li>Contact</li>
               </a>
               <a style={{ cursor: "pointer" }}>
@@ -159,14 +159,14 @@ const Navbar = () => {
           <a href="">
             <li>Home</li>
           </a>
-          <a href="">
-            <li>About</li>
+          <a href="#About">
+            <li onClick={() => setbar(false)}>About</li>
           </a>
-          <a href="">
-            <li>Service</li>
+          <a href="#Pruduct">
+            <li onClick={() => setbar(false)} >Products</li>
           </a>
-          <a href="">
-            <li>Contact</li>
+          <a href="#Contact">
+            <li onClick={() => setbar(false)} >Contact</li>
           </a>
           <a style={{ cursor: "pointer" }}>
             <li
@@ -206,7 +206,7 @@ const Navbar = () => {
       <div className="hero-text">
         <div className="hero-text-in">
           <TextType
-            text={[`Text typing effect for your websites Happy coding! `]}
+            text={[` Mehnatimizda milliy qadriyat, mahoratimizda esa yillarning tajribasi mujassam. `]}
             typingSpeed={75}
             pauseDuration={1500}
             showCursor={true}

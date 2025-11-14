@@ -1,6 +1,13 @@
 import "./Products.css"
 import photo from "../../assets/pictures/image.png"
 import photo1 from "../../assets/pictures/image(1).png"
+import photo2 from "../../assets/pictures/image(2).png"
+import photo3 from "../../assets/pictures/image(3).png"
+import photo4 from "../../assets/pictures/image(4).png"
+import photo5 from "../../assets/pictures/image(5).png"
+import photo6 from "../../assets/pictures/image(6).png"
+import photo7 from "../../assets/pictures/image(7).png"
+import photo8 from "../../assets/pictures/image(8).png"
 import star from "../../assets/pictures/Star1.png"
 import { IoMdHeartEmpty } from "react-icons/io";
 import { useState, useEffect } from "react";
@@ -12,13 +19,13 @@ const Products = () => {
     const maxsulotlar = [
         { id: 1, img: photo, word: "Super Serum Skin Mis Spf 40", star: star, price: 37, view: 123 },
         { id: 2, img: photo1, word: "Super Serum Skin Mis Spf 4000", star: star, price: 24, view: 243 },
-        { id: 3, img: photo1, word: "Super Serum Skin Mis Spf 4000", star: star, price: 21, view: 234 },
-        { id: 4, img: photo1, word: "Super Serum Skin Mis Spf 4000", star: star, price: 89, view: 233 },
-        { id: 5, img: photo1, word: "Super Serum Skin Mis Spf 4000", star: star, price: 213, view: 323 },
-        { id: 6, img: photo1, word: "Super Serum Skin Mis Spf 4000", star: star, price: 56, view: 553 },
-        { id: 7, img: photo1, word: "Super Serum Skin Mis Spf 4000", star: star, price: 12, view: 263 },
-        { id: 8, img: photo1, word: "Super Serum Skin Mis Spf 4000", star: star, price: 39, view: 563 },
-        { id: 9, img: photo1, word: "Super Serum Skin Mis Spf 4000", star: star, price: 40, view: 723 },
+        { id: 3, img: photo2, word: "Super Serum Skin Mis Spf 4000", star: star, price: 21, view: 234 },
+        { id: 4, img: photo3, word: "Super Serum Skin Mis Spf 4000", star: star, price: 89, view: 233 },
+        { id: 5, img: photo4, word: "Super Serum Skin Mis Spf 4000", star: star, price: 213, view: 323 },
+        { id: 6, img: photo5, word: "Super Serum Skin Mis Spf 4000", star: star, price: 56, view: 553 },
+        { id: 7, img: photo6, word: "Super Serum Skin Mis Spf 4000", star: star, price: 12, view: 263 },
+        { id: 8, img: photo7, word: "Super Serum Skin Mis Spf 4000", star: star, price: 39, view: 563 },
+        { id: 9, img: photo8, word: "Super Serum Skin Mis Spf 4000", star: star, price: 40, view: 723 },
     ];
 
     const [visible, setVisible] = useState(3);
@@ -46,7 +53,7 @@ const Products = () => {
     }
 
     return (
-        <div className="Products">
+        <div className="Products" id="Pruduct">
             <div className="prodacts-big-container">
                 <div className="products-container h1">
                     <h1>Tovarlar</h1>

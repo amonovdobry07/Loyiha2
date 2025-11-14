@@ -3,18 +3,21 @@ import "./AboutUs.css"
 
 const AboutUs = () => {
     return (
-        <div className="AboutUs">
+        <div className="AboutUs" id="About">
             <div className="about-container">
                 <div className="about-container-left">
                     <h1 data-aos="zoom-out-up">
                         Biz Haqimizda
                     </h1>
                     <p data-aos="zoom-out-up">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, minus ex, incidunt reiciendis quidem nesciunt officiis aut
-                        quo consectetur porro sit maiores quasi unde? Ipsa, qui necessitatibus nam exercitationem consequatur vero odit id eveniet sunt
-                        quaerat, iure nesciunt, in eius praesentium commodi dolore. Temporibus sequi ratione quod ab officia pariatur! Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit. Sit corporis saepe excepturi, accusantium voluptatibus facilis, incidunt sequi quis nam ab deleniti rem nemo qui soluta temporibus distinctio perferendis nihil rerum!
+                        2000-yildan buyon tikuvchilik sohasida faoliyat yuritib kelayotgan korxonamiz mijozlarimizga sifatli, mustahkam va milliy ruhni o‘zida mujassam etgan mahsulotlarni taqdim etib kelmoqda. Yillar davomida orttirilgan tajriba, an’anaviy tikuvchilik uslublari va zamonaviy texnologiyalar uyg‘unligi bizning ishimizning asosiy tamoyilidir.
 
+                        Faoliyatimiz davomida erishgan yutuqlarimizdan biri — “O‘zbekiston Mustaqilligining 15 yilligi” ko‘krak nishoni bilan taqdirlanishimizdir. Bu bizning mehnatimiz e’tirof etilganining yorqin isbotidir.
+
+                        Bugungi kunda korxonamiz:
+                        — Ko‘rpa va ko‘rpachalar,
+                        — Milliy liboslar
+                        ishlab chiqarishga ixtisoslashgan bo‘lib, har bir mahsulot yuqori sifat talablari asosida tayyorlanadi.
                     </p>
                 </div>
 
@@ -25,18 +28,18 @@ const AboutUs = () => {
                             data-aos-delay="300"
                             data-aos-offset="0">
                             <h1>
-                                100+
+                                1000+
                             </h1>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p> Tayyorlangan va mijozlarga yetkazilgan mahsulotlar</p>
                         </span>
                         <span className="a2" data-aos="fade-zoom-in"
                             data-aos-easing="ease-in-back"
                             data-aos-delay="300"
                             data-aos-offset="0">
                             <h1>
-                                15+
+                                25+ yil
                             </h1>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p> Tikuvchilik bo‘yicha tajriba</p>
                         </span>
                     </div>
                     <div className="about-bottom">
@@ -47,7 +50,7 @@ const AboutUs = () => {
                             <h1>
                                 400+
                             </h1>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p> Doimiy mijozlar va buyurtmachilar</p>
                         </span>
                         <span className="a4" data-aos="fade-zoom-in"
                             data-aos-easing="ease-in-back"
@@ -56,7 +59,7 @@ const AboutUs = () => {
                             <h1>
                                 250+
                             </h1>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p> Yiliga ishlab chiqariladigan mahsulotlar turi</p>
                         </span>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 const Contact = () => {
   return (
     <>
-      <div className="Contact" id="contact">
+      <div className="Contact" id="Contact">
         <div className="h11">
           <h1 data-aos="fade-up"
             data-aos-anchor-placement="center-center">Contact</h1>
@@ -23,12 +23,12 @@ const Contact = () => {
             <div className="contact-info">
               <p data-aos="fade-up"
                 data-aos-anchor-placement="center-center">
-                <FaMapMarkerAlt /> Buxoro Shaxar Karvon 14/8
+                <FaMapMarkerAlt /> Buxoro Viloyati Romitan Tumani Guliston Mfy M.Samomiy Ko'chasi 4-uy
               </p>
               <a href="tel:+998884056888" style={{ textDecoration: "none" }}>
                 <p data-aos="fade-up"
                   data-aos-anchor-placement="center-center">
-                  <FaPhoneAlt /> +998 (88) 926 62 42
+                  <FaPhoneAlt /> +998 (99) 385 17 55
                 </p>
               </a>
             </div>
@@ -39,12 +39,12 @@ const Contact = () => {
                 data-aos-delay="300">
                 <FaFacebookF />
               </a>
-              <a href="#" className="telegram" data-aos="fade-up"
+              <a href="https://t.me/Rano_066" rel="noreferrer noopener" className="telegram" data-aos="fade-up" target="_blank"
                 data-aos-anchor-placement="center-center"
                 data-aos-delay="400">
                 <FaTelegramPlane />
               </a>
-              <a href="#" className="instagram" data-aos="fade-up"
+              <a href="https://www.instagram.com/sarpolar_rano_romitan?utm_source=qr&igsh=MXBiNXV3cHkwc3J5aA==" className="instagram" data-aos="fade-up"
                 data-aos-anchor-placement="center-center"
                 data-aos-delay="500">
                 <FaInstagram />
@@ -57,13 +57,11 @@ const Contact = () => {
             </div>
 
             <div className="contact-map" >
-              <iframe data-aos="zoom-out-up"
-
-                title="map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.909519794547!2d90.37725527451355!3d23.75094298871412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf4a83e4ab25%3A0x9477f0c06e7dbb7!2sDhanmondi%2C%20Dhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1686666666666"
-                allowFullScreen
+              <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6119.49477530948!2d64.381694!3d39.92466900000001!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMznCsDU1JzI4LjgiTiA2NMKwMjInNTQuMSJF!5e0!3m2!1sru!2s!4v1763117217338!5m2!1sru!2s"
+                allowfullscreen=""
                 loading="lazy"
-              ></iframe>
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
             </div>
           </div>
 
