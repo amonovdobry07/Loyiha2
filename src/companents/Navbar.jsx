@@ -193,7 +193,17 @@ const Navbar = () => {
       </div>
 
       {/* Hero text */}
-      <div className="hero-text">
+
+      <div className="hero-txt">
+        <TextType
+          text={[` Mehnatimizda milliy qadriyat, mahoratimizda esa yillarning tajribasi mujassam. `]}
+          typingSpeed={75}
+          pauseDuration={1500}
+          showCursor={true}
+          cursorCharacter="|"
+        />
+      </div>
+      {/* <div className="hero-text">
         <div className="hero-text-in">
           <TextType
             text={[` Mehnatimizda milliy qadriyat, mahoratimizda esa yillarning tajribasi mujassam. `]}
@@ -203,7 +213,7 @@ const Navbar = () => {
             cursorCharacter="|"
           />
         </div>
-      </div>
+      </div> */}
     </nav>
   );
 };

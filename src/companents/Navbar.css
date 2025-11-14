@@ -21,19 +21,20 @@ nav .overlay {
 }
 
 /* 🔹 Overlay ustidagi barcha kontentni ko‘rinarli qilish */
-nav .header-back-bg,
-nav .hero-text {
-  position: relative;
-  z-index: 2;
-}
 
-.header-video {
+.hero-txt {
+  color: white;
   position: absolute;
   width: 100%;
-  height: 80%;
-  top: 20%;
-  object-fit: cover;
+  max-width: 1200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 500px;
+  text-align: center;
 }
+
+
+
 
 
 .header-back-bg {
@@ -47,7 +48,7 @@ nav .hero-text {
 .header-contact-container {
   width: 100%;
   max-width: 1200px;
-  padding: 30px 0 40px 0;
+  padding: 10px 0 30px 0;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -149,6 +150,7 @@ nav .hero-text {
   display: flex;
   justify-content: space-between;
   font-family: "Montserrat", sans-serif;
+  z-index: 10;
 }
 
 .header-nav-links-left {
@@ -167,6 +169,7 @@ nav .hero-text {
 .header-nav-links-left ul a {
   color: #b9b5b4;
   transition: 0.3s;
+  z-index: 999;
 }
 
 .header-nav-links-left ul a:hover {
@@ -241,8 +244,8 @@ nav .hero-text {
   left: 0;
   background-color: rgba(46, 46, 45, 0.596);
   padding: 20px 25px 20px 0;
-  z-index: 80 !important;
-  top: -170px;
+  z-index: 9999 !important;
+  top: 15px;
 }
 
 
@@ -482,6 +485,12 @@ nav .hero-text {
   #language option {
     color: #ececec;
     background: #333841;
+  }
+
+  .hero-txt {
+    top: 500px;
+    padding: 10px 30px;
+    text-align: center;
   }
 }
 
