@@ -193,6 +193,110 @@
     background-color: #111;
 }
 
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Modal ichidagi rasm */
+.modal-img {
+    width: 90%;
+    max-width: 450px;
+    border-radius: 12px;
+    object-fit: contain;
+    animation: zoomIn 0.35s ease;
+}
+
+/* Fade animatsiya */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Zoom animatsiya */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* =======================
+   SWIPE TUGMALAR
+========================= */
+.modal-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 45px;
+    padding: 12px 18px;
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.modal-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Chap tugma */
+.modal-btn.left {
+    left: 30px;
+}
+
+/* O‘ng tugma */
+.modal-btn.right {
+    right: 30px;
+}
+
+/* =======================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+    .modal-img {
+        width: 92%;
+        max-width: 340px;
+    }
+
+    .modal-btn {
+        font-size: 32px;
+        padding: 8px 12px;
+    }
+
+    .modal-btn.left {
+        left: 10px;
+    }
+
+    .modal-btn.right {
+        right: 10px;
+    }
+}
+
 /* Responsive Media Queries */
 
 @media screen and (min-width: 992px) {
