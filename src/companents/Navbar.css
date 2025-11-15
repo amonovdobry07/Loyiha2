@@ -151,6 +151,7 @@ nav .overlay {
   justify-content: space-between;
   font-family: "Montserrat", sans-serif;
   z-index: 10;
+  border-radius: 10px;
 }
 
 .header-nav-links-left {

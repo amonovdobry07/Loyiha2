@@ -87,7 +87,7 @@ const Contact = () => {
               <a href="https://t.me/Rano_066" className="telegram" target="_blank" rel="noreferrer noopener">
                 <FaTelegramPlane />
               </a>
-              <a href="https://www.instagram.com/sarpolar_rano_romitan" className="instagram"  >
+              <a href="https://www.instagram.com/sarpolar_rano_romitan" className="instagram" target="_blank" rel="noopener noreferrer" >
                 <FaInstagram />
               </a>
               <a href="#" className="youtube"  >

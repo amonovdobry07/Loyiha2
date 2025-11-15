@@ -12,6 +12,8 @@ import picture1 from "../assets/pictures/picture1.jpg";
 import picture2 from "../assets/pictures/picture2.jpg";
 import picture3 from "../assets/pictures/picture3.jpg";
 import TextType from './TextType';
+import { useTransition } from "react";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -34,6 +36,8 @@ const Navbar = () => {
   //     once: false,    // sahifa scroll qaytib kelganda qaytadan animatsiya bo'lsinmi
   //   });
   // }, []);
+
+  const { t, i18n } = useTranslation()
 
   return (
     <nav style={{ backgroundImage: `url(${images[backImage]})` }}>
@@ -59,7 +63,7 @@ const Navbar = () => {
               </div>
               <span className="span-icon"></span>
               <div className="icon-text" data-aos="fade-up" data-aos-duration="1000">
-                <p>Phone Number:</p>
+                <p>{t(`number`)}</p>
                 <a href="tel:+998993851755">
                   <h4>+(998) 99 385 17 55</h4>
                 </a>
@@ -129,7 +133,13 @@ const Navbar = () => {
               data-aos-easing="ease-in-back"
               data-aos-delay="300"
               data-aos-offset="0">
-              <select name="language" id="language">
+              <select name="language"
+                id="language"
+                onChange={(e) => {
+                  i18n.changeLanguage(e.target.value)
+                }}
+                defaultValue="uz"
+              >
                 <option value="uz">🇺🇿 Uzbek</option>
                 <option value="ru">🇷🇺 Russian</option>
                 <option value="en">🇬🇧 English</option>
