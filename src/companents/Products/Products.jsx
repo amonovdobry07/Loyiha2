@@ -17,9 +17,9 @@ import 'aos/dist/aos.css';
 const Products = () => {
 
     const maxsulotlar = [
-        { id: 1, img: photo, word: "Super Serum Skin Mis Spf 40", star: star, price: 37, view: 123 },
-        { id: 2, img: photo1, word: "Super Serum Skin Mis Spf 4000", star: star, price: 24, view: 243 },
-        { id: 3, img: photo2, word: "Super Serum Skin Mis Spf 4000", star: star, price: 21, view: 234 },
+        { id: 1, img: photo, word: "Super Serum Skin Mis Spf 40", star: star, price: 37, view: 17 },
+        { id: 2, img: photo1, word: "Super Serum Skin Mis Spf 4000", star: star, price: 24, view: 29 },
+        { id: 3, img: photo2, word: "Super Serum Skin Mis Spf 4000", star: star, price: 21, view: 138 },
         { id: 4, img: photo3, word: "Super Serum Skin Mis Spf 4000", star: star, price: 89, view: 233 },
         { id: 5, img: photo4, word: "Super Serum Skin Mis Spf 4000", star: star, price: 213, view: 323 },
         { id: 6, img: photo5, word: "Super Serum Skin Mis Spf 4000", star: star, price: 56, view: 553 },
@@ -73,7 +73,7 @@ const Products = () => {
                                     <IoMdHeartEmpty />
                                 </div>
                                 <div className="feature">
-                                    feature
+                                    xususuyat
                                 </div>
                             </div>
                             <div className="cards-bottom">

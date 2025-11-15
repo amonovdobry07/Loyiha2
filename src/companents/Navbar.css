@@ -191,7 +191,7 @@ nav .overlay {
 
 .colsultation-button {
   font-family: "Montserrat", sans-serif;
-  width: 70%;
+  width: 60%;
   height: 80%;
   position: relative;
   right: 10px;
@@ -205,6 +205,7 @@ nav .overlay {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  border-radius: 5px;
 }
 
 .colsultation-button select {
@@ -327,6 +328,10 @@ nav .overlay {
 }
 
 @media screen and (max-width: 992px) {
+  .header-contact-container {
+    padding: 10px 20px;
+  }
+
   .header-nav-links-container {
     display: none;
   }
@@ -430,9 +435,11 @@ nav .overlay {
     display: flex;
     font-size: 35px;
     top: -150px;
-    left: 35%;
+    left: 42%;
     transform: rotate(180deg);
     transition: 0.5s;
+    z-index: 999;
+    color: #656669;
   }
 
   .close.closePage {
@@ -516,9 +523,10 @@ nav .overlay {
     display: flex;
     font-size: 35px;
     top: -150px;
-    left: 10%;
+    left: 23%;
     transform: rotate(180deg);
     transition: 0.5s;
+    color: #656669;
   }
 
   .close.closePage {

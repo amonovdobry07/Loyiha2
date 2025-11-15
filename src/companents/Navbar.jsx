@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <nav style={{ backgroundImage: `url(${images[backImage]})` }}>
       {/* 🔹 Overlay qo‘shildi */}
-      <div className="overlay" data-aos="zoom-in" data-aos-duration="2000" ></div>
+      <div className="overlay"></div>
 
       <div className="header-back-bg">
         {/* ===========================

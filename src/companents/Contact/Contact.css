@@ -171,14 +171,16 @@
   transform: translateY(-2px);
 }
 
-.coright {
-  width: 100%;
-  padding: 15px 0;
-  font-family: "Open Sans", sans-serif;
-  background-color: #e5deda;
+
+
+.copyright {
+  font-size: 16px;
+  line-height: 25px;
   text-align: center;
-  color: black;
-  font-weight: 500;
+  width: 100%;
+  padding: 10px;
+  background-color: #E5DEDA;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* RESPONSIVE */

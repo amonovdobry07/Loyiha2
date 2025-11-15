@@ -1,7 +1,16 @@
 
 import "./AboutUs.css"
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const AboutUs = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,   // ❗ Faqat bir marta ishlaydi
+        });
+    }, []);
     return (
         <div className="AboutUs" id="About">
             <div className="about-container">

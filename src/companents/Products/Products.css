@@ -121,6 +121,18 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.cards-bottom h4 {
+    font-size: 20px;
+
+}
+
+.usd {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 
 .stars {
@@ -133,6 +145,8 @@
     width: 16px;
     height: 16px;
 }
+
+
 
 .price {
     width: 100%;
