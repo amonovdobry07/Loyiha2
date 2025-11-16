@@ -32,7 +32,8 @@ const translationUz = {
     emailingiz: 'Sizning Emailingiz',
     xabar: "Xabar Yozmoq",
     yuborish: "Yuborish",
-    buxoro: "Buxoro Viloyati Romitan Tumani Guliston Mfy M.Samomiy Ko'chasi 4-uy"
+    buxoro: "Buxoro Viloyati Romitan Tumani Guliston Mfy M.Samomiy Ko'chasi 4-uy",
+    xususiyat: "xususiyat"
 
 
 

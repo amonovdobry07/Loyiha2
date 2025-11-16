@@ -32,7 +32,9 @@ const translationEn = {
     emailingiz: 'Your Email',
     xabar: 'Write a Message',
     yuborish: 'Send',
-    buxoro: "Bukhara Region, Romitan District, Guliston MFY, M.Samomiy Street, House 4"
+    buxoro: "Bukhara Region, Romitan District, Guliston MFY, M.Samomiy Street, House 4",
+    xususiyat: "Features"
+
 
 }
 

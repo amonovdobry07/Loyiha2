@@ -117,7 +117,7 @@ const Products = () => {
                                 <div className="like">
                                     <IoMdHeartEmpty />
                                 </div>
-                                <div className="feature">xususiyat</div>
+                                <div className="feature">{t(`xususiyat`)}</div>
                             </div>
 
                             <div className="cards-bottom">
