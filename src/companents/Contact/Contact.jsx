@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -57,12 +58,14 @@ const Contact = () => {
     });
   };
 
+  const { t, i18n } = useTranslation()
+
   return (
     <>
       <div className="Contact" id="Contact">
         <div className="h11">
           <h1>
-            Contact
+            {t(`boglanish`)}
           </h1>
         </div>
 
@@ -71,7 +74,7 @@ const Contact = () => {
           <div className="contact-left">
             <div className="contact-info">
               <p>
-                <FaMapMarkerAlt /> Buxoro Viloyati Romitan Tumani Guliston Mfy M.Samomiy Ko'chasi 4-uy
+                <FaMapMarkerAlt /> {t(`buxoro`)}
               </p>
               <a href="tel:+998993851755" style={{ textDecoration: "none" }}>
                 <p>
@@ -108,7 +111,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="Sizning Ismingiz"
+                placeholder={t(`ismingiz`)}
                 className="contact-input"
 
                 value={form.name}
@@ -118,7 +121,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="Sizning Emailingiz"
+                placeholder={t(`emailingiz`)}
                 className="contact-input"
 
                 value={form.email}
@@ -127,7 +130,7 @@ const Contact = () => {
               />
               <textarea
                 name="message"
-                placeholder="Xabar Yozmoq"
+                placeholder={t(`xabar`)}
                 className="contact-input"
 
                 value={form.message}
@@ -135,7 +138,7 @@ const Contact = () => {
                 required
               ></textarea>
               <button type="submit" className="contact-button" data-aos="zoom-in-up">
-                Yuborish
+                {t(`yuborish`)}
               </button>
             </form>
           </div>

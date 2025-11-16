@@ -97,6 +97,15 @@
     transform: scale(1.1);
 }
 
+.active-star {
+    filter: none;
+}
+
+.inactive-star {
+    filter: grayscale(100%);
+    opacity: 0.4;
+}
+
 .feature {
     height: 28px;
     padding: 0 10px;

@@ -76,7 +76,7 @@ const Navbar = () => {
               </div>
               <span className="span-m-icon"></span>
               <div className="m-icon-text " data-aos="fade-up" data-aos-duration="1000">
-                <p>Location:</p>
+                <p>{t(`manzil`)}</p>
                 <a href="">
                   <h4>Buxoro Viloyat</h4>
                 </a>
@@ -97,16 +97,16 @@ const Navbar = () => {
             data-aos-offset="0">
             <ul>
               <a href="">
-                <li>Home</li>
+                <li>{t(`boshSahifa`)}</li>
               </a>
               <a href="#About">
-                <li>About</li>
+                <li>{t(`bizHaqimizda`)}</li>
               </a>
               <a href="#Pruduct">
-                <li>Products</li>
+                <li>{t(`tavarlar`)}</li>
               </a>
               <a href="#Contact">
-                <li>Contact</li>
+                <li>{t(`boglanish`)}</li>
               </a>
 
               <li className="DropDrop"
@@ -206,7 +206,7 @@ const Navbar = () => {
 
       <div className="hero-txt">
         <TextType
-          text={[` Mehnatimizda milliy qadriyat, mahoratimizda esa yillarning tajribasi mujassam. `]}
+          text={[t(`mexnat`)]}
           typingSpeed={75}
           pauseDuration={1500}
           showCursor={true}

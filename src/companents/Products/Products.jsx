@@ -17,21 +17,28 @@ import { useTranslation } from "react-i18next";
 
 const Products = () => {
 
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
 
     const maxsulotlar = [
-        { id: 1, img: photo, word: t(`product1`), star: star, price: 37, view: 17 },
-        { id: 2, img: photo1, word: t(`product2`), star: star, price: 24, view: 29 },
-        { id: 3, img: photo2, word: t(`product3`), star: star, price: 21, view: 138 },
-        { id: 4, img: photo3, word: t(`product4`), star: star, price: 89, view: 233 },
-        { id: 5, img: photo4, word: t(`product5`), star: star, price: 213, view: 323 },
-        { id: 6, img: photo5, word: t(`product6`), star: star, price: 56, view: 553 },
-        { id: 7, img: photo6, word: t(`product7`), star: star, price: 12, view: 263 },
-        { id: 8, img: photo7, word: t(`product8`), star: star, price: 39, view: 563 },
-        { id: 9, img: photo8, word: t(`product9`), star: star, price: 40, view: 723 },
+        { id: 1, img: photo, word: t(`product1`), price: 37, view: 17 },
+        { id: 2, img: photo1, word: t(`product2`), price: 24, view: 29 },
+        { id: 3, img: photo2, word: t(`product3`), price: 21, view: 138 },
+        { id: 4, img: photo3, word: t(`product4`), price: 89, view: 233 },
+        { id: 5, img: photo4, word: t(`product5`), price: 213, view: 323 },
+        { id: 6, img: photo5, word: t(`product6`), price: 56, view: 553 },
+        { id: 7, img: photo6, word: t(`product7`), price: 12, view: 263 },
+        { id: 8, img: photo7, word: t(`product8`), price: 39, view: 563 },
+        { id: 9, img: photo8, word: t(`product9`), price: 40, view: 723 },
     ];
 
     const [visible, setVisible] = useState(3);
+
+    // ⭐ FOYDALANUVCHI RATING BERISHI UCHUN STATE
+    const [ratings, setRatings] = useState({});
+
+    const giveRating = (id, star) => {
+        setRatings(prev => ({ ...prev, [id]: star }));
+    };
 
     // Modal uchun states
     const [currentIndex, setCurrentIndex] = useState(null);
@@ -81,18 +88,20 @@ const Products = () => {
 
         const diff = e.changedTouches[0].clientX - touchStartX;
 
-        if (diff > 50) prevImage();   // chapdan o‘ngga — oldingi
-        if (diff < -50) nextImage();  // o‘ngdan chapga — keyingi
+        if (diff > 50) prevImage();
+        if (diff < -50) nextImage();
 
         setTouchStartX(null);
     };
+
+
 
     return (
         <div className="Products" id="Pruduct">
             <div className="prodacts-big-container">
 
                 <div className="products-container h1">
-                    <h1>Tovarlar</h1>
+                    <h1>{t(`tavar`)}</h1>
                 </div>
 
                 <div className="products-container cards-boxes">
@@ -102,27 +111,39 @@ const Products = () => {
                             key={index}
                             data-aos="fade-up"
                             data-aos-delay={index * 100}
-                        // MODALGA INDEX KIRITILDI
                         >
                             <div className="cards-picture">
                                 <img src={maxsulot.img} alt="" />
                                 <div className="like">
                                     <IoMdHeartEmpty />
                                 </div>
-                                <div className="feature">xususuyat</div>
+                                <div className="feature">xususiyat</div>
                             </div>
 
                             <div className="cards-bottom">
                                 <h4>{maxsulot.word}</h4>
+
+                                {/* ⭐⭐ RATING DYNAMIC ⭐⭐ */}
                                 <div className="stars">
-                                    {[...Array(5)].map((_, i) => (
-                                        <img src={star} alt="" key={i} />
+                                    {[1, 2, 3, 4, 5].map(num => (
+                                        <img
+                                            key={num}
+                                            src={star}
+                                            className={
+                                                num <= (ratings[maxsulot.id] || 0)
+                                                    ? "active-star"
+                                                    : "inactive-star"
+                                            }
+                                            style={{ cursor: "pointer" }}
+                                            onClick={() => giveRating(maxsulot.id, num)}
+                                        />
                                     ))}
                                     &nbsp;&nbsp;<p>({maxsulot.view})</p>
                                 </div>
+
                                 <div className="price">
                                     <div className="usd"><h1>${maxsulot.price}</h1></div>
-                                    <div className="price-btn" onClick={() => setCurrentIndex(index)}>Ko'rish</div>
+                                    <div className="price-btn" onClick={() => setCurrentIndex(index)}>{t(`korish`)}</div>
                                 </div>
                             </div>
                         </div>
@@ -130,13 +151,13 @@ const Products = () => {
                 </div>
 
                 <div className="koproq-btn">
-                    {visible > 3 && <button onClick={handleMinus}>Kamroq...</button>}
+                    {visible > 3 && <button onClick={handleMinus}>{t(`kamroq`)}...</button>}
                     &nbsp;
-                    {visible < maxsulotlar.length && <button onClick={handleClick}>Ko‘proq...</button>}
+                    {visible < maxsulotlar.length && <button onClick={handleClick}>{t(`koproq`)}...</button>}
                 </div>
             </div>
 
-            {/* 🔥 MODAL + SWIPE + NEXT/PREV */}
+            {/* MODAL + SWIPE */}
             {currentIndex !== null && (
                 <div className="modal" onClick={closeModal}>
                     <img
