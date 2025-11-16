@@ -81,18 +81,14 @@ const Contact = () => {
             </div>
 
             <div className="contact-socials">
-              <a href="#" className="facebook">
-                <FaFacebookF />
-              </a>
+
               <a href="https://t.me/Rano_066" className="telegram" target="_blank" rel="noreferrer noopener">
                 <FaTelegramPlane />
               </a>
               <a href="https://www.instagram.com/sarpolar_rano_romitan" className="instagram" target="_blank" rel="noopener noreferrer" >
                 <FaInstagram />
               </a>
-              <a href="#" className="youtube"  >
-                <FaYoutube />
-              </a>
+
             </div>
 
             <div className="contact-map" data-aos="zoom-in">
