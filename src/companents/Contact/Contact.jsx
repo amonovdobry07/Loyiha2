@@ -147,7 +147,7 @@ const Contact = () => {
       </div>
 
       <div className="copyright">
-        <p>© 2025 OTABEK & MARAT. All rights reserved.</p>
+        <p>© 2025 Ochilova Rano. All rights reserved.</p>
         <span>
           Designed by{" "}
           <a
