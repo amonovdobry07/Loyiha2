@@ -17,19 +17,19 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [bar, setbar] = useState(false);
 
-  const [backImage, setBackImage] = useState(0)
+  // const [backImage, setBackImage] = useState(0)
 
-  const images = [picture1, picture2, picture3]
-
-
+  const images = [picture1]
 
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setBackImage((prev) => (prev + 1) % images.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
+
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setBackImage((prev) => (prev + 1) % images.length);
+  //   }, 2500);
+  //   return () => clearInterval(interval);
+  // }, []);
   // useEffect(() => {
   //   AOS.init({
   //     duration: 5000, // global duration ms — endi hamma data-aos elementlari 1000ms bo'ladi
@@ -40,7 +40,7 @@ const Navbar = () => {
   const { t, i18n } = useTranslation()
 
   return (
-    <nav style={{ backgroundImage: `url(${images[backImage]})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", width: "100%", }}>
+    <nav style={{ backgroundImage: `url(${images[0]})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", width: "100%", }}>
       {/* 🔹 Overlay qo‘shildi */}
       <div className="overlay"></div>
 
@@ -211,7 +211,7 @@ const Navbar = () => {
       {/* Hero text */}
 
       <div className="hero-text-wrapper">
-        <img src={Logo} alt="" style={{ display: "flex", position: "relative", zIndex: 50, margin: "10px auto" }} />
+        <img src={Logo} alt="" style={{ display: "flex", position: "relative", zIndex: 5, margin: "10px auto" }} />
         <HeroText key={i18n.language} text={t("mexnat")} />
       </div>
     </nav>
