@@ -211,6 +211,7 @@ const Navbar = () => {
       {/* Hero text */}
 
       <div className="hero-text-wrapper">
+        <img src={Logo} alt="" style={{ display: "flex", position: "relative", zIndex: 50, margin: "10px auto" }} />
         <HeroText key={i18n.language} text={t("mexnat")} />
       </div>
     </nav>

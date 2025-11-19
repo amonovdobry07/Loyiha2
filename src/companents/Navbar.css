@@ -29,7 +29,7 @@ nav .overlay {
   max-width: 1200px;
   left: 50%;
   transform: translate(-50%, -50%);
-  top: 650px;
+  top: 750px;
   text-align: start;
 }
 
@@ -362,6 +362,8 @@ nav .overlay {
     align-items: center;
     color: white;
     font-size: 30px;
+    position: relative;
+    top: -10px;
   }
 
   .mobile-header-container {
