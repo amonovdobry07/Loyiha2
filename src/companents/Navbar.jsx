@@ -8,8 +8,17 @@ import picture1 from "../assets/pictures/picture1.jpg";
 import picture2 from "../assets/pictures/picture2.jpg";
 import picture3 from "../assets/pictures/picture3.jpg";
 import { useTranslation } from "react-i18next";
+import Logo1 from "../assets/pictures/Logo1.png"
 import Logo from "../assets/pictures/Logo.png"
 import HeroText from "./HeroText";
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
 
 
 const Navbar = () => {
@@ -51,8 +60,18 @@ const Navbar = () => {
         <div className="header-contact-container">
           <div className="header-logo">
             <h1 data-aos="fade-up" data-aos-duration="1000">
-              <img src={Logo} alt="" style={{ width: "150px" }} />
+
+              <a href="https://t.me/Rano_066" className="telegram" target="_blank" rel="noreferrer noopener">
+                <FaTelegramPlane style={{ color: " #AA8703" }} />
+              </a>
+              <a href="https://www.instagram.com/sarpolar_rano_romitan" className="instagram" target="_blank" rel="noopener noreferrer" >
+                <FaInstagram style={{ color: " #AA8703", marginLeft: "20px" }} />
+              </a>
             </h1>
+          </div>
+
+          <div className="mobile-logo">
+            <img src={Logo} alt="" />
           </div>
 
           {/* =================================
@@ -61,7 +80,7 @@ const Navbar = () => {
           <div className="header-phone-container">
             <div className="phone-icon">
               <div className="icon" data-aos="fade-up" data-aos-duration="1000">
-                <MdPhonelinkRing />
+                <MdPhonelinkRing color="#AA8703" />
               </div>
               <span className="span-icon"></span>
               <div className="icon-text" data-aos="fade-up" data-aos-duration="1000">
@@ -87,7 +106,7 @@ const Navbar = () => {
           </div>
 
           <div className="header-bars" onClick={() => setbar(!bar)}>
-            <HiMiniBars3BottomRight />
+            <HiMiniBars3BottomRight color="#AA8703" fontSize={"50px"} />
           </div>
         </div>
 
@@ -211,7 +230,7 @@ const Navbar = () => {
       {/* Hero text */}
 
       <div className="hero-text-wrapper">
-        <img src={Logo} alt="" style={{ display: "flex", position: "relative", zIndex: 5, margin: "10px auto" }} />
+        <img data-aos="fade-up" data-aos-duration="1500" src={Logo} alt="" style={{ display: "flex", position: "relative", zIndex: 5, margin: "10px auto" }} />
         <HeroText key={i18n.language} text={t("mexnat")} />
       </div>
     </nav>

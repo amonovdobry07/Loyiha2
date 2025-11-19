@@ -4,7 +4,7 @@
 .Products {
     width: 100%;
     padding: 60px 20px;
-    background-color: #e5deda;
+    background-color: #002B1B;
 }
 
 .prodacts-big-container {
@@ -29,11 +29,10 @@
     font-optical-sizing: auto;
 }
 
+
+
 .h1 {
     text-align: center;
-    background: linear-gradient(90deg, #535353, #969696);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-family: "Elms Sans", sans-serif;
     font-optical-sizing: auto;
     font-size: 20px;

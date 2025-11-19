@@ -109,7 +109,7 @@ const Products = () => {
             <div className="prodacts-big-container">
 
                 <div className="products-container h1">
-                    <h1>{t(`tavar`)}</h1>
+                    <h1 style={{ color: " #AA8703" }}>{t(`tavar`)}</h1>
                 </div>
 
                 <div className="products-container cards-boxes">
@@ -159,9 +159,9 @@ const Products = () => {
                 </div>
 
                 <div className="koproq-btn">
-                    {visible > 3 && <button onClick={handleMinus}>{t(`kamroq`)}...</button>}
+                    {visible > 3 && <button onClick={handleMinus} style={{ background: " #AA8703" }}>{t(`kamroq`)}...</button>}
                     &nbsp;
-                    {visible < maxsulotlar.length && <button onClick={handleClick}>{t(`koproq`)}...</button>}
+                    {visible < maxsulotlar.length && <button style={{ background: " #AA8703" }} onClick={handleClick}>{t(`koproq`)}...</button>}
                 </div>
             </div>
 
