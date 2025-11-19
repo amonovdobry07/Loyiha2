@@ -33,7 +33,18 @@ const translationEn = {
     xabar: 'Write a Message',
     yuborish: 'Send',
     buxoro: "Bukhara Region, Romitan District, Guliston MFY, M.Samomiy Street, House 4",
-    xususiyat: "Features"
+    xususiyat: "Features",
+    tavar1: "long seamless cotton jacket, double-sided with hood",
+    tavar2: "long cotton double-sided jacket",
+    tavar3: "Naturalka suit, sewn in modern design",
+    tavar4: "long cotton double-sided jacket",
+    tavar5: "long double-sided chapan made of Balgarka fabric",
+    tavar6: "double-sided surtuk made of Balgarka fabric",
+    tavar7: "sleeveless jacket made of Balgarka fabric",
+    tavar8: "cotton suit, double-sided",
+    tavar9: "double-sided suit made of Balgarka fabric, can wear both sides",
+    narx: "sum",
+    sm: "cm"
 
 
 }

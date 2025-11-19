@@ -19,10 +19,10 @@ const AboutUs = () => {
         <div className="AboutUs" id="About">
             <div className="about-container">
                 <div className="about-container-left">
-                    <h1 data-aos="zoom-out-up">
+                    <h1 data-aos="zoom-up">
                         {t(`biz`)}
                     </h1>
-                    <p data-aos="zoom-out-up">
+                    <p data-aos="zoom-up">
                         {t(`haqimizda`)}
                     </p>
                 </div>

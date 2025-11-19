@@ -2,18 +2,15 @@ import "./Navbar.css";
 import { MdPhonelinkRing } from "react-icons/md";
 import { TbMapPin2 } from "react-icons/tb";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
-import { FiPhoneCall } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import { FaTelegramPlane } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa6";
-import { IoLogoInstagram } from "react-icons/io5";
 import picture1 from "../assets/pictures/picture1.jpg";
 import picture2 from "../assets/pictures/picture2.jpg";
 import picture3 from "../assets/pictures/picture3.jpg";
-import TextType from './TextType';
-import { useTransition } from "react";
 import { useTranslation } from "react-i18next";
+import Logo from "../assets/pictures/Logo.png"
+import HeroText from "./HeroText";
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -23,6 +20,9 @@ const Navbar = () => {
   const [backImage, setBackImage] = useState(0)
 
   const images = [picture1, picture2, picture3]
+
+
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,7 +50,9 @@ const Navbar = () => {
                 ==========================*/}
         <div className="header-contact-container">
           <div className="header-logo">
-            <h1 data-aos="fade-up" data-aos-duration="1000">BigLogo</h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000">
+              <img src={Logo} alt="" style={{ width: "100px" }} />
+            </h1>
           </div>
 
           {/* =================================
@@ -157,16 +159,16 @@ const Navbar = () => {
       <div className={`mobile-header-container ${bar ? "active" : ""}`}>
         <ul className="mobile-ul">
           <a href="">
-            <li>Home</li>
+            <li>{t(`boshSahifa`)}</li>
           </a>
           <a href="#About">
-            <li onClick={() => setbar(false)}>About</li>
+            <li onClick={() => setbar(false)}>{t(`bizHaqimizda`)}</li>
           </a>
           <a href="#Pruduct">
-            <li onClick={() => setbar(false)} >Products</li>
+            <li onClick={() => setbar(false)} >{t(`tavarlar`)}</li>
           </a>
           <a href="#Contact">
-            <li onClick={() => setbar(false)} >Contact</li>
+            <li onClick={() => setbar(false)} >{t(`boglanish`)}</li>
           </a>
           <a style={{ cursor: "pointer" }}>
             <li
@@ -194,7 +196,11 @@ const Navbar = () => {
           </a>
         </ul>
         <div className="mobile-links">
-          <select name="language" id="language">
+          <select name="language" id="language"
+            onChange={(e) => {
+              i18n.changeLanguage(e.target.value)
+            }}
+            defaultValue="uz">
             <option value="uz">🇺🇿 Uzbek</option>
             <option value="ru">🇷🇺 Russian</option>
             <option value="en">🇬🇧 English</option>
@@ -204,26 +210,9 @@ const Navbar = () => {
 
       {/* Hero text */}
 
-      <div className="hero-txt">
-        <TextType
-          text={[t(`mexnat`)]}
-          typingSpeed={75}
-          pauseDuration={1500}
-          showCursor={true}
-          cursorCharacter="|"
-        />
+      <div className="hero-text-wrapper">
+        <HeroText key={i18n.language} text={t("mexnat")} />
       </div>
-      {/* <div className="hero-text">
-        <div className="hero-text-in">
-          <TextType
-            text={[` Mehnatimizda milliy qadriyat, mahoratimizda esa yillarning tajribasi mujassam. `]}
-            typingSpeed={75}
-            pauseDuration={1500}
-            showCursor={true}
-            cursorCharacter="|"
-          />
-        </div>
-      </div> */}
     </nav>
   );
 };

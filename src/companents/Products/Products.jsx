@@ -1,13 +1,13 @@
 import "./Products.css"
-import photo from "../../assets/pictures/image.png"
-import photo1 from "../../assets/pictures/image(1).png"
-import photo2 from "../../assets/pictures/image(2).png"
-import photo3 from "../../assets/pictures/image(3).png"
-import photo4 from "../../assets/pictures/image(4).png"
-import photo5 from "../../assets/pictures/image(5).png"
-import photo6 from "../../assets/pictures/image(6).png"
-import photo7 from "../../assets/pictures/image(7).png"
-import photo8 from "../../assets/pictures/image(8).png"
+import photo1 from "../../assets/pictures/tavar2.JPG"
+import photo from "../../assets/pictures/tavar1.JPG"
+import photo2 from "../../assets/pictures/tavar3.JPG"
+import photo3 from "../../assets/pictures/tavar4.JPG"
+import photo4 from "../../assets/pictures/tavar5.JPG"
+import photo5 from "../../assets/pictures/tavar6.JPG"
+import photo6 from "../../assets/pictures/tavar7.JPG"
+import photo7 from "../../assets/pictures/tavar8.JPG"
+import photo8 from "../../assets/pictures/tavar9.JPG"
 import star from "../../assets/pictures/Star1.png"
 import { IoMdHeartEmpty } from "react-icons/io";
 import { useState, useEffect } from "react";
@@ -20,15 +20,16 @@ const Products = () => {
     const { t, i18n } = useTranslation()
 
     const maxsulotlar = [
-        { id: 1, img: photo, word: t(`product1`), price: 37, view: 17 },
-        { id: 2, img: photo1, word: t(`product2`), price: 24, view: 29 },
-        { id: 3, img: photo2, word: t(`product3`), price: 21, view: 138 },
-        { id: 4, img: photo3, word: t(`product4`), price: 89, view: 233 },
-        { id: 5, img: photo4, word: t(`product5`), price: 213, view: 323 },
-        { id: 6, img: photo5, word: t(`product6`), price: 56, view: 553 },
-        { id: 7, img: photo6, word: t(`product7`), price: 12, view: 263 },
-        { id: 8, img: photo7, word: t(`product8`), price: 39, view: 563 },
-        { id: 9, img: photo8, word: t(`product9`), price: 40, view: 723 },
+        { id: 1, img: photo, word: t(`tavar1`), price: "220 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
+        { id: 2, img: photo1, word: t(`tavar1`), price: "260 000" + " " + t(`narx`), view: "50-52" + " " + t(`sm`) },
+        { id: 3, img: photo2, word: t(`tavar1`), price: "260 000" + " " + t(`narx`), view: "50-52" + " " + t(`sm`) },
+        { id: 4, img: photo3, word: t(`tavar1`), price: "250 000" + " " + t(`narx`), view: "52-54" + " " + t(`sm`) },
+        { id: 5, img: photo4, word: t(`tavar1`), price: "290 000" + " " + t(`narx`), view: "52-54" + " " + t(`sm`) },
+        { id: 6, img: photo5, word: t(`tavar1`), price: "290 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
+        { id: 7, img: photo6, word: t(`tavar1`), price: "170 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
+        { id: 8, img: photo7, word: t(`tavar1`), price: "190 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
+        { id: 9, img: photo8, word: t(`tavar1`), price: "290 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
+
     ];
 
     const [visible, setVisible] = useState(3);
@@ -47,12 +48,11 @@ const Products = () => {
     const [touchStartX, setTouchStartX] = useState(null);
 
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({
+            duration: 1000,
+            once: true, // faqat bir marta animatsiya
+        });
     }, []);
-
-    useEffect(() => {
-        AOS.refresh();
-    }, [visible]);
 
     const visibleProducts = maxsulotlar.slice(0, visible);
 
@@ -138,11 +138,11 @@ const Products = () => {
                                             onClick={() => giveRating(maxsulot.id, num)}
                                         />
                                     ))}
-                                    &nbsp;&nbsp;<p>({maxsulot.view})</p>
+                                    &nbsp;&nbsp;<p>{maxsulot.view}</p>
                                 </div>
 
                                 <div className="price">
-                                    <div className="usd"><h1>${maxsulot.price}</h1></div>
+                                    <div className="usd"><h3>{maxsulot.price}</h3></div>
                                     <div className="price-btn" onClick={() => setCurrentIndex(index)}>{t(`korish`)}</div>
                                 </div>
                             </div>

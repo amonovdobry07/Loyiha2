@@ -33,8 +33,18 @@ const translationUz = {
     xabar: "Xabar Yozmoq",
     yuborish: "Yuborish",
     buxoro: "Buxoro Viloyati Romitan Tumani Guliston Mfy M.Samomiy Ko'chasi 4-uy",
-    xususiyat: "xususiyat"
-
+    xususiyat: "xususiyat",
+    tavar1: "uzun engsiz x/b matodan tikilgan ikki yoqlama kapshonkalik chopon",
+    tavar2: "uzun x/b matodan tikilgan ikki yoqlama chopon",
+    tavar3: "Naturalka kostyum, zamonaviy dizaynda tikilgan",
+    tavar4: "Uzun x/b matodan ikki yoqlama tikilgan chopon",
+    tavar5: "Balgarka matodan tikilgan ikki yoqlama uzun chopan",
+    tavar6: "Balgarka matodan ikki yoqlama tikilgan surtuk",
+    tavar7: "Engsiz jaket balgarka matodan tikilgan",
+    tavar8: "Kostyum x/b matodan tikilgan ikki yoqlama",
+    tavar9: "Kostyum balgarka matodan tikilgan ikki yoqlama, ikki tomonini ham kisa bo‘ladi",
+    narx: "so'm",
+    sm: "sm"
 
 
 
