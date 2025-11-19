@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 .Contact {
   width: 100%;
   padding: 100px 0;
@@ -168,6 +169,8 @@
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .contact-right button:hover {
@@ -187,6 +190,8 @@
   font-family: "Noto Sans", sans-serif;
   color: white;
   font-weight: 500;
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
 }
 
 

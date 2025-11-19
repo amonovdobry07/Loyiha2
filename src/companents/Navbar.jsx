@@ -117,9 +117,9 @@ const Navbar = () => {
             data-aos-delay="300"
             data-aos-offset="0">
             <ul>
-              <a href="">
+              {/* <a href="">
                 <li>{t(`boshSahifa`)}</li>
-              </a>
+              </a> */}
               <a href="#About">
                 <li>{t(`bizHaqimizda`)}</li>
               </a>
