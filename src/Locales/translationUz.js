@@ -44,7 +44,8 @@ const translationUz = {
     tavar8: "Kostyum x/b matodan tikilgan ikki yoqlama",
     tavar9: "Kostyum balgarka matodan tikilgan ikki yoqlama, ikki tomonini ham kisa bo‘ladi",
     narx: "so'm",
-    sm: "sm"
+    sm: "sm",
+    viloyat: "Buxoro Viloyati"
 
 
 

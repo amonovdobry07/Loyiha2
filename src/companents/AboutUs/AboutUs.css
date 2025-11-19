@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 .AboutUs {
     width: 100%;
     padding: 100px 0;
@@ -15,6 +17,8 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
+    font-family: "Elms Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 
 .about-container-left {

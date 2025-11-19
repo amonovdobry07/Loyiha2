@@ -44,7 +44,8 @@ const translationEn = {
     tavar8: "cotton suit, double-sided",
     tavar9: "double-sided suit made of Balgarka fabric, can wear both sides",
     narx: "sum",
-    sm: "cm"
+    sm: "cm",
+    viloyat: "Bukhara Region"
 
 
 }

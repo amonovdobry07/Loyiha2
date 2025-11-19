@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* General Section */
 .Products {
@@ -25,6 +25,8 @@
     flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
+    font-family: "Elms Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 
 .h1 {
@@ -32,10 +34,10 @@
     background: linear-gradient(90deg, #535353, #969696);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Elms Sans", sans-serif;
+    font-optical-sizing: auto;
     font-size: 20px;
     margin-bottom: 40px;
-    color: #fc0000;
 }
 
 /* Product Card */
@@ -120,6 +122,8 @@
     font-size: 0.8rem;
     font-weight: 600;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    font-family: "Elms Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 
 /* Card Bottom */
@@ -130,7 +134,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Elms Sans", sans-serif;
     font-optical-sizing: auto;
 }
 
@@ -140,7 +144,7 @@
 }
 
 .usd {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Elms Sans", sans-serif;
     font-optical-sizing: auto;
 }
 
@@ -162,7 +166,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "Hepta Slab", serif;
+    font-family: "Elms Sans", sans-serif;
+    font-optical-sizing: auto;
     font-size: 1.05rem;
     margin-top: 8px;
 }
@@ -185,6 +190,8 @@
 .koproq-btn {
     text-align: center;
     margin-top: 40px;
+    font-family: "Elms Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 
 .koproq-btn button {

@@ -40,7 +40,7 @@ const Navbar = () => {
   const { t, i18n } = useTranslation()
 
   return (
-    <nav style={{ backgroundImage: `url(${images[backImage]})` }}>
+    <nav style={{ backgroundImage: `url(${images[backImage]})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", width: "100%", }}>
       {/* 🔹 Overlay qo‘shildi */}
       <div className="overlay"></div>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
         <div className="header-contact-container">
           <div className="header-logo">
             <h1 data-aos="fade-up" data-aos-duration="1000">
-              <img src={Logo} alt="" style={{ width: "100px" }} />
+              <img src={Logo} alt="" style={{ width: "150px" }} />
             </h1>
           </div>
 
@@ -80,7 +80,7 @@ const Navbar = () => {
               <div className="m-icon-text " data-aos="fade-up" data-aos-duration="1000">
                 <p>{t(`manzil`)}</p>
                 <a href="">
-                  <h4>Buxoro Viloyat</h4>
+                  <h4>{t(`viloyat`)}</h4>
                 </a>
               </div>
             </div>
