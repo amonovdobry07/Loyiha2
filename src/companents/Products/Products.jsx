@@ -1,13 +1,24 @@
 import "./Products.css"
-import photo1 from "../../assets/pictures/tavar2.JPG"
-import photo from "../../assets/pictures/tavar1.JPG"
-import photo2 from "../../assets/pictures/tavar3.JPG"
-import photo3 from "../../assets/pictures/tavar4.JPG"
-import photo4 from "../../assets/pictures/tavar5.JPG"
-import photo5 from "../../assets/pictures/tavar6.JPG"
-import photo6 from "../../assets/pictures/tavar7.JPG"
-import photo7 from "../../assets/pictures/tavar8.JPG"
-import photo8 from "../../assets/pictures/tavar9.JPG"
+import photo1 from "../../assets/pictures/tavar2.png"
+import photo from "../../assets/pictures/tavar1.png"
+import photo2 from "../../assets/pictures/tavar3.png"
+import photo3 from "../../assets/pictures/tavar4.png"
+import photo4 from "../../assets/pictures/tavar5.png"
+import photo5 from "../../assets/pictures/tavar6.png"
+import photo6 from "../../assets/pictures/tavar7.png"
+import photo7 from "../../assets/pictures/tavar8.png"
+import photo8 from "../../assets/pictures/tavar9.png"
+
+import photo11 from "../../assets/pictures/tavar2.JPG"
+import photo0 from "../../assets/pictures/tavar1.JPG"
+import photo22 from "../../assets/pictures/tavar3.JPG"
+import photo33 from "../../assets/pictures/tavar4.JPG"
+import photo44 from "../../assets/pictures/tavar5.JPG"
+import photo55 from "../../assets/pictures/tavar6.JPG"
+import photo66 from "../../assets/pictures/tavar7.JPG"
+import photo77 from "../../assets/pictures/tavar8.JPG"
+import photo88 from "../../assets/pictures/tavar9.JPG"
+
 import star from "../../assets/pictures/Star1.png"
 import { IoMdHeartEmpty } from "react-icons/io";
 import { useState, useEffect } from "react";
@@ -20,16 +31,15 @@ const Products = () => {
     const { t, i18n } = useTranslation()
 
     const maxsulotlar = [
-        { id: 1, img: photo, word: t(`tavar1`), price: "220 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
-        { id: 2, img: photo1, word: t(`tavar1`), price: "260 000" + " " + t(`narx`), view: "50-52" + " " + t(`sm`) },
-        { id: 3, img: photo2, word: t(`tavar1`), price: "260 000" + " " + t(`narx`), view: "50-52" + " " + t(`sm`) },
-        { id: 4, img: photo3, word: t(`tavar1`), price: "250 000" + " " + t(`narx`), view: "52-54" + " " + t(`sm`) },
-        { id: 5, img: photo4, word: t(`tavar1`), price: "290 000" + " " + t(`narx`), view: "52-54" + " " + t(`sm`) },
-        { id: 6, img: photo5, word: t(`tavar1`), price: "290 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
-        { id: 7, img: photo6, word: t(`tavar1`), price: "170 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
-        { id: 8, img: photo7, word: t(`tavar1`), price: "190 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
-        { id: 9, img: photo8, word: t(`tavar1`), price: "290 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
-
+        { id: 1, img: photo, modalImg: photo0, word: t(`tavar1`), price: "220 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
+        { id: 2, img: photo1, modalImg: photo11, word: t(`tavar2`), price: "260 000" + " " + t(`narx`), view: "50-52" + " " + t(`sm`) },
+        { id: 3, img: photo2, modalImg: photo22, word: t(`tavar3`), price: "260 000" + " " + t(`narx`), view: "50-52" + " " + t(`sm`) },
+        { id: 4, img: photo3, modalImg: photo33, word: t(`tavar4`), price: "250 000" + " " + t(`narx`), view: "52-54" + " " + t(`sm`) },
+        { id: 5, img: photo4, modalImg: photo44, word: t(`tavar5`), price: "290 000" + " " + t(`narx`), view: "52-54" + " " + t(`sm`) },
+        { id: 6, img: photo5, modalImg: photo55, word: t(`tavar6`), price: "290 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
+        { id: 7, img: photo6, modalImg: photo66, word: t(`tavar7`), price: "170 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
+        { id: 8, img: photo7, modalImg: photo77, word: t(`tavar8`), price: "190 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
+        { id: 9, img: photo8, modalImg: photo88, word: t(`tavar9`), price: "290 000" + " " + t(`narx`), view: "48-50" + " " + t(`sm`) },
     ];
 
     const [visible, setVisible] = useState(3);
@@ -93,8 +103,6 @@ const Products = () => {
 
         setTouchStartX(null);
     };
-
-
 
     return (
         <div className="Products" id="Pruduct">
@@ -161,7 +169,7 @@ const Products = () => {
             {currentIndex !== null && (
                 <div className="modal" onClick={closeModal}>
                     <img
-                        src={maxsulotlar[currentIndex].img}
+                        src={maxsulotlar[currentIndex].modalImg} // 🔹 Modal uchun .JPG rasm
                         className="modal-img"
                         onClick={(e) => e.stopPropagation()}
                         onTouchStart={handleTouchStart}
