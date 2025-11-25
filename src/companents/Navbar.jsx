@@ -98,7 +98,7 @@ const Navbar = () => {
               <span className="span-m-icon"></span>
               <div className="m-icon-text " data-aos="fade-up" data-aos-duration="1000">
                 <p>{t(`manzil`)}</p>
-                <a href="">
+                <a href="https://www.google.com/maps?ll=39.924224,64.370386&z=13&t=m&hl=ru&gl=US&mapclient=embed&q=39%C2%B055%2728.8%22N+64%C2%B022%2754.1%22E+39.924667,+64.381694@39.9246667,64.3816944" target="blank" rel="noopener noreferrer">
                   <h4>{t(`viloyat`)}</h4>
                 </a>
               </div>
@@ -137,10 +137,10 @@ const Navbar = () => {
                 Market Place ▼
                 {open && (
                   <ul className="DropDawnMenu">
-                    <li><a href="">Ozon</a></li>
-                    <li><a href="">Wilberries</a></li>
-                    <li><a href="">Uzum Market</a></li>
-                    <li><a href="">Yandex Market</a></li>
+                    <li><a href="https://uz.ozon.com/product/karnavalnaya-odezhda-3138738955/?oos_search=false" target="_blank" rel="noopener noreferrer" >Ozon</a></li>
+                    <li><a href="https://www.wildberries.ru/catalog/644282323/detail.aspx?targetUrl=GP" target="_blank" rel="noopener noreferrer" >Wilberries</a></li>
+                    <li><a href="https://uzum.uz/uz/product/ayollar-uchun-ikki-2132188" target="_blank" rel="noopener noreferrer" >Uzum Market</a></li>
+                    <li><a href="https://market.yandex.uz/card/dlinnyy-dvustoronniy-chopon-iz-bolgarskoy-tkani-model-vypolnena-iz-vysokokachestvennoy-bolgarskoy-tkani/4778271869?businessId=216503443&showOriginalKmEmptyOffer=1&ogV=-7" target="_blank" rel="noopener noreferrer">Yandex Market</a></li>
                   </ul>
                 )}
               </li>
@@ -197,18 +197,10 @@ const Navbar = () => {
               Market Place ▼
               {isMobile && (
                 <ul className="MobileDropDawn-menu">
-                  <li>
-                    <a href="">Ozon</a>
-                  </li>
-                  <li>
-                    <a href="">Wildberries</a>
-                  </li>
-                  <li>
-                    <a href="">Yandex Market</a>
-                  </li>
-                  <li>
-                    <a href="">Uzum Market</a>
-                  </li>
+                  <li><a href="https://uz.ozon.com/product/karnavalnaya-odezhda-3138738955/?oos_search=false" target="_blank" rel="noopener noreferrer" >Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/644282323/detail.aspx?targetUrl=GP" target="_blank" rel="noopener noreferrer" >Wilberries</a></li>
+                  <li><a href="https://uzum.uz/uz/product/ayollar-uchun-ikki-2132188" target="_blank" rel="noopener noreferrer" >Uzum Market</a></li>
+                  <li><a href="https://market.yandex.uz/card/dlinnyy-dvustoronniy-chopon-iz-bolgarskoy-tkani-model-vypolnena-iz-vysokokachestvennoy-bolgarskoy-tkani/4778271869?businessId=216503443&showOriginalKmEmptyOffer=1&ogV=-7" target="_blank" rel="noopener noreferrer">Yandex Market</a></li>
                 </ul>
               )}
             </li>
